@@ -11,7 +11,8 @@ const styles = {
         border: 'none',
         padding: '15px',
         borderRadius: '15px',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        marginRight: '2.5rem'
     },
     bubble: {
         position: 'relative',

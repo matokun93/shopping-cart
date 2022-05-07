@@ -9,21 +9,31 @@ const styles = {
         flexWrap: 'wrap',
         gap: '2rem',
         padding: '0 4rem',
+    },
+    loading: {
+        marginTop: '30%',
+        color: '#0a283E',
     }
 }
 
 class Products extends Component {
     render() {
-        const { products, addToCart } = this.props
+        const { products, addToCart, isLoading } = this.props
 
         return (
             <div style={styles.products}>
-                {products.map(product =>
-                    <Product
-                        addToCart={addToCart}
-                        key={product.id}
-                        product={product}
-                    />)}
+                {
+                    (isLoading)
+                        ? <div style={styles.loading}>
+                            <h2>Cargando Productos...</h2>
+                        </div>
+                        : products.map(product =>
+                            <Product
+                                addToCart={addToCart}
+                                key={product.id}
+                                product={product}
+                            />)
+                }
             </div>
         )
     }

@@ -12,25 +12,18 @@ const App = () => {
     products: [],
     cart: [
     ],
-    isCartVisible: false
+    isCartVisible: false,
+    isLoading: true
   })
 
   useEffect(() => {
     axios.get('https://fakestoreapi.com/products')
       .then(res => setState({
         ...state,
+        isLoading: false,
         products: res.data,
       }))
   }, [])
-
-  // useEffect(() => {
-  //   fetch('https://fakestoreapi.com/products')
-  //     .then(res => res.json())
-  //     .then(res => setState({
-  //       ...state,
-  //       products: res,
-  //     }))
-  // }, [])
 
   const addToCart = (product) => {
     const { cart } = state
@@ -85,6 +78,7 @@ const App = () => {
         <Products
           products={state.products}
           addToCart={addToCart}
+          isLoading={state.isLoading}
         />
       </Layout>
     </div>

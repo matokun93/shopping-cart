@@ -7,7 +7,7 @@ const styles = {
         padding: '15px 20px',
         border: 'none',
         cursor: 'pointer',
-        borderRadius: '5px'
+        borderRadius: '5px',
     }
 }
 

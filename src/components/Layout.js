@@ -4,6 +4,7 @@ const styles = {
     layout: {
         backgroundColor: '#fff',
         color: '#0a283E',
+        paddingTop: '100px'
     },
     container: {
     }

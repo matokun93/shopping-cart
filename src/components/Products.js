@@ -11,7 +11,7 @@ const styles = {
         padding: '0 4rem',
     },
     loading: {
-        marginTop: '30%',
+        marginTop: '20%',
         color: '#0a283E',
     }
 }
